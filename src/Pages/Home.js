@@ -6,8 +6,10 @@ function Home() {
   const { name, tagline, img } = personalDetails;
   const h11 = useRef();
   const h12 = useRef();
+
   const h13 = useRef();
   const myimageref = useRef();
+
   const buttonref = useRef();
 
   useEffect(() => {
@@ -69,8 +71,7 @@ function Home() {
   }, []);
 
   const handleDownloadCV = () => {
-    // Replace with your actual CV file path
-    const cvUrl = "/path/to/your/cv.pdf";
+    const cvUrl = "/Hashem-CV.pdf";
     const link = document.createElement("a");
     link.href = cvUrl;
     link.download = "CV_" + name.replace(/\s+/g, "_") + ".pdf";
